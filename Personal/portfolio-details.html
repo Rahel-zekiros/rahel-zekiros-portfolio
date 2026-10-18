@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Project Details | Rahel Zekiros</title>
+  <meta name="description"
+    content="Explore the projects, technologies, and demonstrations of Rahel Zekiros.">
+
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .project-screenshot {
+      width: 100%;
+      min-height: 250px;
+      max-height: 520px;
+      object-fit: contain;
+      border-radius: 10px;
+      background: #f3f3f3;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .project-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 5px;
+      background: #149ddd;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .project-links a:hover {
+      background: #087bb0;
+      color: #fff;
+    }
+
+    .technology-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0;
+      margin: 18px 0;
+      list-style: none;
+    }
+
+    .technology-list li {
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #e9f6fc;
+      color: #126b94;
+      font-size: 13px;
+    }
+
+    .project-not-found {
+      padding: 50px 15px;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      .project-screenshot {
+        min-height: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body class="portfolio-details-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img
+          src="assets/img/logo.png"
+          alt="Rahel Zekiros Logo"
+          style="width:80px;height:80px;object-fit:contain;">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1 id="page-heading">Project Details</h1>
+              <p class="mb-0">
+                Explore the project overview, technologies, source code,
+                and live demonstration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li class="current" id="breadcrumb-project">Project Details</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Project Details -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+
+        <div id="project-content" class="row gy-4">
+
+          <!-- Project Screenshot -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider">
+              <img
+                id="project-image"
+                src="assets/img/portfolio/chat-area.png"
+                alt="Project screenshot"
+                class="project-screenshot img-fluid">
+            </div>
+          </div>
+
+          <!-- Project Information -->
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3 id="project-title">Project Information</h3>
+
+              <ul>
+                <li>
+                  <strong>Developer:</strong>
+                  Rahel Zekiros
+                </li>
+
+                <li>
+                  <strong>Category:</strong>
+                  <span id="project-category"></span>
+                </li>
+
+                <li>
+                  <strong>Project Type:</strong>
+                  <span id="project-type"></span>
+                </li>
+              </ul>
+
+              <h4>Technologies</h4>
+              <ul id="project-technologies" class="technology-list"></ul>
+
+              <div class="project-links">
+                <a id="project-github"
+                  href="https://github.com/Rahel-zekiros"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="bi bi-github"></i>
+                  GitHub
+                </a>
+
+                <a id="project-live"
+                  href="portfolio.html"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="bi bi-box-arrow-up-right"></i>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Description -->
+          <div class="col-12">
+            <div class="portfolio-description">
+              <h2 id="project-description-title">About This Project</h2>
+              <p id="project-description"></p>
+
+              <h3>Key Features</h3>
+              <ul id="project-features"></ul>
+
+              <a href="portfolio.html" class="btn btn-outline-primary mt-3">
+                <i class="bi bi-arrow-left"></i>
+                Back to Portfolio
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Project Not Found -->
+        <div id="project-not-found" class="project-not-found" hidden>
+          <h2>Project Not Found</h2>
+          <p>
+            The requested project could not be found.
+            Please return to the portfolio and select a project.
+          </p>
+          <a href="portfolio.html" class="btn btn-primary">
+            Back to Portfolio
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">Rahel Zekiros</h3>
+
+      <p>
+        Frontend and Full-Stack Developer building responsive web
+        applications, backend systems, and AI-powered experiences.
+      </p>
+
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/Rahel-zekiros"
+          target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+
+        <a href="https://www.instagram.com/rahel_zekiros/"
+          target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="https://t.me/yehenonteketay"
+          target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <i class="bi bi-telegram"></i>
+        </a>
+      </div>
+
+      <div class="copyright">
+        <span>Copyright</span>
+        <strong class="px-1 sitename">Rahel Zekiros</strong>
+        <span>All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top"
+    class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Scroll to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <div id="preloader"></div>
+
+  <!-- Project Data and Dynamic Rendering -->
+  <script>
+    const projects = {
+      chatgpt: {
+        title: "ChatGPT Clone",
+        image: "assets/img/portfolio/chat-area.png",
+        category: "AI-Powered Application",
+        type: "Personal Full-Stack Project",
+        technologies: [
+          "React",
+          "JavaScript",
+          "Node.js",
+          "Express",
+          "MySQL",
+          "Gemini API"
+        ],
+        description:
+          "An AI-powered conversational application designed to provide an interactive chat experience. The project connects a React frontend to a backend API and uses an AI model to generate conversational responses.",
+        features: [
+          "Interactive conversational interface",
+          "AI-generated responses",
+          "Backend API integration",
+          "Conversation history and message handling",
+          "Responsive user interface"
+        ],
+        github:
+          "https://github.com/Rahel-zekiros/conversational-ai",
+        live:
+          "https://smart-chat-app-2026.vercel.app/"
+      },
+
+      forum: {
+        title: "Evangadi Discussion Forum",
+        image: "assets/img/portfolio/dashboard.png",
+        category: "Full-Stack Development",
+        type: "Discussion Forum with AI Features",
+        technologies: [
+          "React",
+          "JavaScript",
+          "Node.js",
+          "Express",
+          "MySQL",
+          "REST API",
+          "RAG"
+        ],
+        description:
+          "A full-stack discussion platform that enables users to ask questions, share answers, and explore relevant discussions. The project also incorporates AI-powered functionality to help users discover related information.",
+        features: [
+          "Question-and-answer functionality",
+          "User authentication",
+          "Frontend and backend API integration",
+          "Database-backed discussion content",
+          "AI-assisted knowledge discovery"
+        ],
+        github:
+          "https://github.com/Rahel-zekiros/evangadi-discussion-board",
+        live:
+          "https://evangadi-forum-hub.vercel.app/"
+      },
+
+      cinestream: {
+        title: "Netflix-Clone",
+        image: "assets/img/portfolio/netflix-clone.png",
+        category: "Frontend Development",
+        type: "Movie Browsing Application",
+        technologies: [
+          "React",
+          "JavaScript",
+          "CSS",
+          "Movie API"
+        ],
+        description:
+          "A movie browsing application featuring a cinematic interface, movie cards, and a responsive layout. It focuses on presenting movie information through an engaging browsing experience.",
+        features: [
+          "Cinematic movie browsing interface",
+          "Movie cards and artwork",
+          "Responsive page layout",
+          "Interactive movie browsing elements",
+          "Reusable React components"
+        ],
+        github:
+          "https://github.com/Rahel-zekiros/cine-stream-hub",
+        live:
+          "https://cine-stream-hub.vercel.app/"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const projectKey = params.get("project");
+    const project = projects[projectKey];
+
+    if (project) {
+      document.title = project.title + " | Rahel Zekiros";
+
+      document.getElementById("page-heading").textContent =
+        project.title;
+
+      document.getElementById("breadcrumb-project").textContent =
+        project.title;
+
+      document.getElementById("project-title").textContent =
+        project.title;
+
+      document.getElementById("project-category").textContent =
+        project.category;
+
+      document.getElementById("project-type").textContent =
+        project.type;
+
+      document.getElementById("project-description-title").textContent =
+        "About " + project.title;
+
+      document.getElementById("project-description").textContent =
+        project.description;
+
+      const projectImage = document.getElementById("project-image");
+      projectImage.src = project.image;
+      projectImage.alt = project.title + " screenshot";
+
+      projectImage.addEventListener("error", function () {
+        this.alt = "Project screenshot is unavailable";
+      }, { once: true });
+
+      const technologyList =
+        document.getElementById("project-technologies");
+
+      project.technologies.forEach(function (technology) {
+        const item = document.createElement("li");
+        item.textContent = technology;
+        technologyList.appendChild(item);
+      });
+
+      const featuresList =
+        document.getElementById("project-features");
+
+      project.features.forEach(function (feature) {
+        const item = document.createElement("li");
+        item.textContent = feature;
+        featuresList.appendChild(item);
+      });
+
+      document.getElementById("project-github").href =
+        project.github;
+
+      document.getElementById("project-live").href =
+        project.live;
+
+    } else {
+      document.getElementById("project-content").hidden = true;
+      document.getElementById("project-not-found").hidden = false;
+      document.getElementById("page-heading").textContent =
+        "Project Not Found";
+      document.getElementById("breadcrumb-project").textContent =
+        "Not Found";
+    }
+  </script>
+
+  <!-- Vendor JavaScript -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

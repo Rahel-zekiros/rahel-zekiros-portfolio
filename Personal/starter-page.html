@@ -1,0 +1,746 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rahel Zekiros | Frontend & Full-Stack Developer</title>
+
+  <meta name="description"
+    content="Explore Rahel Zekiros's developer portfolio, including React applications, full-stack projects, and AI-powered applications.">
+
+  <meta name="keywords"
+    content="Rahel Zekiros, React Developer, Frontend Developer, Full-Stack Developer, JavaScript">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Portfolio Landing Page Styles -->
+  <style>
+    :root {
+      --portfolio-accent: #149ddd;
+      --portfolio-dark: #173b6c;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .portfolio-hero {
+      padding: 70px 0 50px;
+    }
+
+    .portfolio-hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-hero h1 span {
+      color: var(--portfolio-accent);
+    }
+
+    .portfolio-hero .hero-description {
+      font-size: 17px;
+      line-height: 1.9;
+      max-width: 680px;
+      margin: 0 auto 25px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.25s ease;
+    }
+
+    .hero-primary {
+      background: var(--portfolio-accent);
+      color: #fff;
+      border: 1px solid var(--portfolio-accent);
+    }
+
+    .hero-primary:hover {
+      background: #087bb0;
+      color: #fff;
+    }
+
+    .hero-secondary {
+      border: 1px solid var(--portfolio-accent);
+      color: var(--portfolio-accent);
+    }
+
+    .hero-secondary:hover {
+      background: var(--portfolio-accent);
+      color: #fff;
+    }
+
+    .hero-socials {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .hero-socials a {
+      font-size: 24px;
+      color: var(--portfolio-accent);
+      transition: 0.2s ease;
+    }
+
+    .hero-socials a:hover {
+      color: var(--portfolio-dark);
+      transform: translateY(-2px);
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto 35px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .skill-card {
+      height: 100%;
+      padding: 24px 20px;
+      border-radius: 10px;
+      background: var(--surface-color, #fff);
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.07);
+      transition: transform 0.25s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-card i {
+      display: inline-block;
+      font-size: 30px;
+      color: var(--portfolio-accent);
+      margin-bottom: 12px;
+    }
+
+    .skill-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .skill-card p {
+      margin: 0;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .featured-project {
+      height: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+      background: var(--surface-color, #fff);
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease;
+    }
+
+    .featured-project:hover {
+      transform: translateY(-5px);
+    }
+
+    .featured-project img {
+      display: block;
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      background: #eee;
+    }
+
+    .featured-project-body {
+      padding: 22px;
+    }
+
+    .featured-project-body h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .featured-project-body p {
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 15px 0 20px;
+    }
+
+    .project-tags span {
+      padding: 5px 10px;
+      border-radius: 20px;
+      background: rgba(20, 157, 221, 0.12);
+      color: var(--portfolio-accent);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .project-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 13px;
+      border: 1px solid var(--portfolio-accent);
+      border-radius: 5px;
+      color: var(--portfolio-accent);
+      text-decoration: none;
+      font-size: 13px;
+      transition: 0.2s ease;
+    }
+
+    .project-links a:hover {
+      background: var(--portfolio-accent);
+      color: #fff;
+    }
+    .portfolio-hero .text-center > p {
+  margin-top: 60px;
+}
+
+    .portfolio-cta {
+      padding: 35px 25px;
+      border-radius: 12px;
+      background: rgba(20, 157, 221, 0.08);
+      text-align: center;
+    }
+
+    .portfolio-cta h2 {
+      margin-bottom: 12px;
+    }
+
+    .portfolio-cta p {
+      line-height: 1.8;
+    }
+
+    @media (max-width: 576px) {
+      .portfolio-hero {
+        padding: 35px 0;
+      }
+
+      .portfolio-hero .hero-description {
+        font-size: 15px;
+      }
+
+      .featured-project img {
+        height: 200px;
+      }
+
+      .hero-actions a {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body class="starter-page-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+     
+    <a href="index.html" 
+   class="logo d-flex align-items-center" 
+   style="width: 80px; height: 80px; min-width: 80px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 0; margin-right: auto; margin-top: 0; position: relative; left: 0;">
+
+  <img src="assets/img/logo.png" 
+       alt="Rahel Zekiros Logo" 
+       style="width: 100%; height: 100%; max-width: none; max-height: none; object-fit: contain; display: block; margin: 0;">
+
+</a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="starter-page.html" class="active">Projects Home</a></li>
+        </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="home" class="portfolio-hero section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="text-center">
+          <p class="text-uppercase fw-semibold mb-2">
+            Welcome to my portfolio
+          </p>
+
+          <h1>
+            Hi, I'm <span>Rahel Zekiros</span>
+          </h1>
+
+          <h2 class="h4 mb-3">
+            Frontend and Full-Stack Developer
+          </h2>
+
+          <p class="hero-description mx-auto">
+            I build responsive web applications, interactive user
+            interfaces, full-stack platforms, and AI-powered experiences.
+            Explore my projects to see what I have been building.
+          </p>
+
+          <div class="hero-actions">
+            <a href="portfolio.html" class="hero-primary">
+              <i class="bi bi-grid"></i>
+              Explore My Projects
+            </a>
+
+            <a href="contact.html" class="hero-secondary">
+              <i class="bi bi-envelope"></i>
+              Contact Me
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/Rahel-zekiros"
+              target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+
+            <a href="https://www.instagram.com/rahel_zekiros/"
+              target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://t.me/yehenonteketay"
+              target="_blank" rel="noopener noreferrer"
+              aria-label="Telegram">
+              <i class="bi bi-telegram"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-preview" class="section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Me</h2>
+          <div>
+            <span>Get to know</span>
+            <span class="description-title">My Work</span>
+          </div>
+        </div>
+
+        <div class="section-intro">
+          <p>
+            I enjoy creating useful, user-friendly web applications.
+            My work includes frontend interfaces, backend API integration,
+            database-driven applications, and AI-assisted features.
+            I focus on clean code, responsive design, and practical
+            solutions to real-world problems.
+          </p>
+
+          <a href="about.html" class="btn-visit align-self-start">
+            More About Me
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills-preview" class="section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Technical Skills</h2>
+          <div>
+            <span>Technologies</span>
+            <span class="description-title">I Work With</span>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="skill-card">
+              <i class="bi bi-window"></i>
+              <h3>Frontend Development</h3>
+              <p>
+                HTML, CSS, JavaScript, React, Bootstrap, responsive
+                layouts, and reusable UI components.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="skill-card">
+              <i class="bi bi-server"></i>
+              <h3>Backend Development</h3>
+              <p>
+                Node.js, Express, REST APIs, authentication, request
+                validation, and server-side application logic.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="skill-card">
+              <i class="bi bi-database"></i>
+              <h3>Databases</h3>
+              <p>
+                MySQL, relational data, SQL queries, and connecting
+                applications to persistent storage.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="skill-card">
+              <i class="bi bi-robot"></i>
+              <h3>AI Integration</h3>
+              <p>
+                AI API integration, conversational applications,
+                embeddings, and retrieval-augmented generation concepts.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="skill-card">
+              <i class="bi bi-git"></i>
+              <h3>Version Control</h3>
+              <p>
+                Git, GitHub, branches, commits, and collaborative
+                development workflows.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="skill-card">
+              <i class="bi bi-cloud-arrow-up"></i>
+              <h3>Deployment</h3>
+              <p>
+                Deploying web applications and configuring environment
+                variables for production environments.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="featured-projects" class="section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Featured Projects</h2>
+          <div>
+            <span>Explore</span>
+            <span class="description-title">My Work</span>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+
+          <!-- ChatGPT Clone -->
+          <div class="col-lg-4 col-md-6">
+            <article class="featured-project">
+
+              <img
+                src="assets/img/portfolio/chat-area.png"
+                alt="ChatGPT Clone application screenshot"
+                loading="lazy">
+
+              <div class="featured-project-body">
+                <h3>ChatGPT Clone</h3>
+
+                <p>
+                  An AI-powered conversational application with an
+                  interactive chat interface and backend integration.
+                </p>
+
+                <div class="project-tags">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>MySQL</span>
+                  <span>Gemini API</span>
+                </div>
+
+                <div class="project-links">
+                  <a href="portfolio-details.html?project=chatgpt">
+                    <i class="bi bi-info-circle"></i>
+                    Details
+                  </a>
+
+                  <a href="https://github.com/Rahel-zekiros/conversational-ai"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                    GitHub
+                  </a>
+
+                  <a href="https://smart-chat-app-2026.vercel.app/"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- Evangadi Discussion Forum -->
+          <div class="col-lg-4 col-md-6">
+            <article class="featured-project">
+
+              <img
+                src="assets/img/portfolio/dashboard.png"
+                alt="Evangadi Discussion Forum dashboard screenshot"
+                loading="lazy">
+
+              <div class="featured-project-body">
+                <h3>Evangadi Discussion Forum</h3>
+
+                <p>
+                  A full-stack question-and-answer platform with
+                  authentication, database integration, and AI-assisted
+                  knowledge discovery features.
+                </p>
+
+                <div class="project-tags">
+                  <span>React</span>
+                  <span>Express</span>
+                  <span>MySQL</span>
+                  <span>RAG</span>
+                </div>
+
+                <div class="project-links">
+                  <a href="portfolio-details.html?project=forum">
+                    <i class="bi bi-info-circle"></i>
+                    Details
+                  </a>
+
+                  <a href="https://github.com/Rahel-zekiros/evangadi-discussion-board"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                    GitHub
+                  </a>
+
+                  <a href="https://evangadi-forum-hub.vercel.app/"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+          <!-- CineStream -->
+          <div class="col-lg-4 col-md-6">
+            <article class="featured-project">
+
+              <img
+                src="assets/img/portfolio/netflix-clone.png"
+                alt="CineStream movie browsing application screenshot"
+                loading="lazy">
+
+              <div class="featured-project-body">
+                <h3>CineStream</h3>
+
+                <p>
+                  A movie browsing experience with a cinematic interface,
+                  interactive movie cards, and responsive styling.
+                </p>
+
+                <div class="project-tags">
+                  <span>React</span>
+                  <span>JavaScript</span>
+                  <span>CSS</span>
+                  <span>Movie API</span>
+                </div>
+
+                <div class="project-links">
+                  <a href="portfolio-details.html?project=cinestream">
+                    <i class="bi bi-info-circle"></i>
+                    Details
+                  </a>
+
+                  <a href="https://github.com/Rahel-zekiros/cine-stream-hub"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                    GitHub
+                  </a>
+
+                  <a href="https://cine-stream-hub.vercel.app/"
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+
+            </article>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="portfolio.html" class="btn-visit">
+            View All Projects
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact-preview" class="section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="portfolio-cta">
+          <h2>Let's Connect</h2>
+
+          <p>
+            Have a project idea or want to connect with me?
+            Visit my contact page to get in touch.
+          </p>
+
+          <a href="contact.html" class="btn-visit">
+            <i class="bi bi-envelope"></i>
+            Contact Me
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+
+      <h3 class="sitename">Rahel Zekiros</h3>
+
+      <p>Frontend and Full-Stack Developer</p>
+
+      <div class="social-links d-flex justify-content-center">
+
+        <a href="https://github.com/Rahel-zekiros"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+
+        <a href="https://www.instagram.com/rahel_zekiros/"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="https://t.me/yehenonteketay"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="Telegram">
+          <i class="bi bi-telegram"></i>
+        </a>
+
+      </div>
+
+      <div class="copyright">
+        <span>Copyright</span>
+        <strong class="px-1 sitename">Rahel Zekiros</strong>
+        <span>All Rights Reserved</span>
+      </div>
+
+    
+
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top"
+    class="scroll-top d-flex align-items-center justify-content-center"
+    aria-label="Scroll to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JavaScript -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
