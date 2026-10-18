@@ -1,110 +1,193 @@
-# Rahel Zekiros — Developer Portfolio
+# Personal Portfolio Website
+
+A responsive personal portfolio website for **Rahel Zekiros**, showcasing professional background, technical skills, development services, and featured projects as a Frontend and Full-Stack Developer.
+
+The website provides visitors with an overview of my work, experience, technical interests, and ways to connect with me.
+
+## Live Demo
+
+- **Portfolio Website:** [https://raheldeveloper.com/portfolio.html](https://raheldeveloper.com)
+- **GitHub Profile:** [https://github.com/Rahel-zekiros](https://github.com/Rahel-zekiros)
 
 ## Overview
 
-This repository contains the source code for my personal developer portfolio website. The website showcases my skills, services, projects, and professional background as a Frontend and Full-Stack Developer.
+This project is a personal developer portfolio built with HTML5, CSS3, JavaScript, and Bootstrap. It is designed to present my development work through a clean interface, organized project gallery, service descriptions, and professional information.
 
-The portfolio is designed to provide visitors with an overview of my development experience, technical skills, and selected projects through a responsive and user-friendly interface.
+The website includes multiple pages that help visitors explore my background, review selected projects, learn about my development services, and find contact information.
+
+The project uses a static website structure, making it suitable for deployment on static hosting platforms.
 
 ## Features
 
-- **Responsive Design:** Adapts to desktop, tablet, and mobile screens.
-- **About Me:** Introduces my background and development interests.
-- **Skills:** Highlights my technical skills and tools.
-- **Services:** Presents the development services I offer.
-- **Projects Portfolio:** Showcases selected projects and their details.
-- **Service Details:** Provides additional information about individual services.
-- **Contact Section:** Helps visitors connect with me.
-- **Animations and Visual Effects:** Adds smooth transitions and interactive elements.
+- **Home Page:** Professional introduction, headline, and featured content.
+- **About Page:** Personal introduction and technical background.
+- **Resume Page:** Education, skills, and professional experience.
+- **Portfolio Page:** Project gallery with categories and project links.
+- **Portfolio Details:** Space for detailed information about individual projects.
+- **Services Page:** Overview of available development services.
+- **Service Details:** Detailed descriptions of individual services.
+- **Contact Page:** Contact information and contact form interface.
+- **Responsive Layout:** Designed to adapt to desktop, tablet, and mobile screens.
+- **Social Links:** Links to professional and social profiles.
+- **Reusable Assets:** Shared stylesheets, JavaScript files, images, icons, and vendor libraries.
+- **Multi-Page Navigation:** Separate pages for different sections of the portfolio.
 
-## Technologies Used
+*Note: Interactive features such as contact form submission, CV downloads, and portfolio filtering depend on their implementation and should be tested on the live website.*
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
-- Bootstrap Icons
-- AOS (Animate On Scroll)
-- Google Fonts
+## Featured Projects
+
+### 1. ChatGPT Clone
+
+An AI chat application demonstrating conversational user interface design and AI integration.
+
+- **Live Demo:** [https://smart-chat-app-2026.vercel.app](https://smart-chat-app-2026.vercel.app/)
+- **GitHub Repository:** [https://github.com/Rahel-zekiros/conversational-ai](https://github.com/Rahel-zekiros/conversational-ai)
+
+### 2. Evangadi Discussion Forum
+
+A discussion platform focused on questions, answers, and user interaction.
+
+- **Live Demo:** [https://evangadi-forum-hub.vercel.app/](https://evangadi-forum-hub.vercel.app/)
+- **GitHub Repository:** [https://github.com/Rahel-zekiros/evangadi-discussion-board](https://github.com/Rahel-zekiros/evangadi-discussion-board)
+
+### 3. CineStream
+
+A movie-discovery interface featuring a streaming-inspired browsing experience.
+
+- **Live Demo:** [https://cine-stream-hub.vercel.app](https://cine-stream-hub.vercel.app/)
+- **GitHub Repository:** [https://github.com/Rahel-zekiros/cine-stream-hub](https://github.com/Rahel-zekiros/cine-stream-hub)
+
+## Technologies
+
+### Core Technologies
+
+- **HTML5:** Structures website content and pages.
+- **CSS3:** Provides styling, layout, and responsive design.
+- **JavaScript:** Supports client-side behavior and interactive elements.
+- **Bootstrap:** Helps build responsive layouts and reusable interface components.
+
+### Supporting Libraries and Assets
+
+- Bootstrap Icons and other project-specific icon libraries.
+- Local images, stylesheets, JavaScript files, and vendor assets.
+- Third-party libraries included in the existing template.
 
 ## Project Structure
 
 ```text
-portfolio/
-├── index.html
-├── service-details.html
-├── portfolio-details.html
+Personal/
 ├── assets/
 │   ├── css/
-│   │   └── main.css
-│   ├── js/
-│   │   └── main.js
 │   ├── img/
-│   │   ├── services/
-│   │   └── portfolio/
+│   ├── js/
 │   └── vendor/
+├── forms/
+├── about.html
+├── contact.html
+├── index.html
+├── portfolio-details.html
+├── portfolio.html
+├── Readme.txt
+├── resume.html
+├── service-details.html
+├── services.html
+├── starter-page.html
 └── README.md
 ```
 
-*Note: The structure above is an example. Update it to match the actual files and folders in your repository.*
+### Directory and File Description
+
+- **assets/** — Contains the website's supporting resources.
+- **assets/css/** — Stylesheets responsible for the visual appearance and layout.
+- **assets/img/** — Images, logos, and project visuals.
+- **assets/js/** — JavaScript files used for website interactions.
+- **assets/vendor/** — Third-party libraries and supporting dependencies.
+- **forms/** — Form-related files included with the project.
+- **index.html** — Main landing page.
+- **about.html** — About page.
+- **contact.html** — Contact page.
+- **resume.html** — Resume and professional background page.
+- **portfolio.html** — Project gallery.
+- **portfolio-details.html** — Project details page.
+- **services.html** — Services overview.
+- **service-details.html** — Detailed service information.
+- **starter-page.html** — Additional template page.
+- **Readme.txt** — Original or supplementary project notes.
+- **README.md** — Main project documentation displayed on GitHub.
 
 ## Getting Started
 
 ### Prerequisites
 
-You need a web browser and a code editor such as Visual Studio Code.
+To view the website locally, you need:
 
-### Installation
+- A modern web browser.
+- A code editor such as Visual Studio Code.
+- The project files, including the `assets/` and `forms/` directories.
 
-1. Clone the repository:
+Node.js is not required for basic viewing of this static website.
 
-   ```bash
-   git clone YOUR_GITHUB_REPOSITORY_URL
-   ```
+### Run Locally
 
-2. Navigate to the project directory:
+1. Clone or download the repository.
+2. Open the `Personal` project folder in Visual Studio Code.
+3. Confirm that the `assets/` directory is present.
+4. Open `index.html` in a browser, or use the VS Code Live Server extension.
+5. Navigate through the pages and test the available links and interactive features.
 
-   ```bash
-   cd YOUR_PROJECT_FOLDER
-   ```
-
-3. Open the project in Visual Studio Code:
-
-   ```bash
-   code .
-   ```
-
-4. Open `index.html` in your browser, or use the Live Server extension in Visual Studio Code.
-
-## Customization
-
-- Update personal information and descriptions in the HTML files.
-- Modify colors, layouts, animations, and responsive styles in `assets/css/main.css`.
-- Update images in the appropriate `assets/img/` directories.
-- Update navigation links and interactive functionality in the HTML and JavaScript files.
-- Replace placeholder links with verified project, GitHub, and contact URLs.
+For the best local development experience, use Live Server so that pages can be viewed through a local development URL.
 
 ## Deployment
 
-The website can be deployed using static website hosting services such as GitHub Pages, Netlify, or Vercel.
+This static website can be hosted using a compatible static hosting provider.
 
-Before deployment, verify that all asset paths, navigation links, project links, and responsive layouts work correctly.
+General deployment steps:
 
-## Live Demo
+1. Upload or connect the project repository to the hosting provider.
+2. Configure the deployment to use the directory containing `index.html`.
+3. Ensure that the `assets/` and `forms/` directories are included.
+4. Deploy the website.
+5. Open the deployed URL and verify the main pages.
+6. Check images, CSS, JavaScript, navigation, and project links.
+7. Test the layout on both desktop and mobile screen sizes.
 
-**Portfolio:** https://raheldeveloper.com/portfolio.html
+After updating the source files, deploy the changes and verify the live website again.
 
-## Author
+## Testing Checklist
 
-**Rahel Zekiros**  
-Frontend and Full-Stack Developer
+Before sharing the portfolio, verify the following:
 
-- GitHub: https://github.com/Rahel-zekiros
+- [ ] The home page loads correctly.
+- [ ] All navigation links lead to the correct pages.
+- [ ] Images, logos, and icons display properly.
+- [ ] CSS styles and JavaScript files load without errors.
+- [ ] Portfolio project links open the correct destinations.
+- [ ] GitHub repository links are publicly accessible.
+- [ ] The layout works on desktop and mobile screens.
+- [ ] The contact form behaves as expected.
+- [ ] Resume or CV links work if provided.
+- [ ] No unused template links or placeholder text remain.
 
-## Acknowledgments
+## Maintenance
 
-The initial website layout is based on the Personal Bootstrap portfolio template by BootstrapMade.
+To maintain the portfolio:
 
-- Template: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+- Keep project descriptions and links up to date.
+- Add new projects when they are ready to showcase.
+- Check that deployed project links remain available.
+- Optimize images to help pages load efficiently.
+- Test the website after modifying CSS, JavaScript, or HTML.
+- Review third-party library and template licenses when redistributing assets.
 
-Please review the original template license and comply with its requirements when distributing or deploying the website.
+## Contact
+
+**Rahel Zekiros**
+
+- **Portfolio:** [https://raheldeveloper.com/portfolio.html](https://raheldeveloper.com)
+- **GitHub:** [https://github.com/Rahel-zekiros](https://github.com/Rahel-zekiros)
+
+For professional inquiries, please use the contact information available on the portfolio website.
+
+## License
+
+This project may include third-party templates, fonts, icons, libraries, and other assets. Review the applicable licenses and attribution requirements before redistributing or reusing those materials.
