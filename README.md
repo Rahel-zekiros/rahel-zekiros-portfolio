@@ -6,7 +6,7 @@ The website provides visitors with an overview of my work, experience, technical
 
 ## Live Demo
 
-- **Portfolio Website:** [https://raheldeveloper.com/portfolio.html](https://raheldeveloper.com)
+- **Portfolio Website:** [https://raheldeveloper.com](https://raheldeveloper.com)
 - **GitHub Profile:** [https://github.com/Rahel-zekiros](https://github.com/Rahel-zekiros)
 
 ## Overview
@@ -47,7 +47,7 @@ An AI chat application demonstrating conversational user interface design and AI
 
 A discussion platform focused on questions, answers, and user interaction.
 
-- **Live Demo:** [https://evangadi-forum-hub.vercel.app/](https://evangadi-forum-hub.vercel.app/)
+- **Live Demo:** [https://evangadi-forum-hub.vercel.app](https://evangadi-forum-hub.vercel.app/)
 - **GitHub Repository:** [https://github.com/Rahel-zekiros/evangadi-discussion-board](https://github.com/Rahel-zekiros/evangadi-discussion-board)
 
 ### 3. CineStream
@@ -183,7 +183,7 @@ To maintain the portfolio:
 
 **Rahel Zekiros**
 
-- **Portfolio:** [https://raheldeveloper.com/portfolio.html](https://raheldeveloper.com)
+- **Portfolio:** [https://raheldeveloper.com](https://raheldeveloper.com)
 - **GitHub:** [https://github.com/Rahel-zekiros](https://github.com/Rahel-zekiros)
 
 For professional inquiries, please use the contact information available on the portfolio website.
